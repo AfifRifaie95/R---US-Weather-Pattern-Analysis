@@ -20,8 +20,9 @@ I use bar charts, box plots, scatter graphs with linear lines, and other charts 
 <img width="526" alt="Screenshot 2024-03-21 112520" src="https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/784f2e08-8eb5-4373-aa23-847912e45531">
 
 
+
 Full PDF report available here,
 
-https://shorturl.at/qsFOR
+https://shorturl.at/qsFOR [Shortcut to GitHub file]
 
 And click Report File.
