@@ -12,10 +12,9 @@ The method begins with performing data importing, data exploration, data cleanin
 
 <img width="448" alt="Screenshot 2024-03-21 111455" src="https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/1b8ea6fc-d5e9-4a9c-9ccf-8723189c98d3">
 
-I have investigated and analysed the data on the weather in the United States by employing the ggplot2 tools in order to generate a visual graph and draw a conclusion. 
-
 The Bar charts, box plots, and scatter graphs with linear lines are representations of graphs that are used. 
 
+<img width="516" alt="Screenshot 2024-03-21 112044" src="https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/694c4697-f2be-4e9e-8f0f-717d87758ef3">
 
 For More information, Visit here:
 
