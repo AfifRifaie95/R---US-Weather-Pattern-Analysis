@@ -25,4 +25,3 @@ Full PDF report available here,
 
 https://shorturl.at/qsFOR [Shortcut to GitHub file]
 
-And click Report File.
