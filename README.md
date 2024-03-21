@@ -19,6 +19,8 @@ I use bar charts, box plots, and scatter graphs with linear lines as representat
 
 <img width="516" alt="Screenshot 2024-03-21 112044" src="https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/694c4697-f2be-4e9e-8f0f-717d87758ef3">
 
+<img width="526" alt="Screenshot 2024-03-21 112520" src="https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/784f2e08-8eb5-4373-aa23-847912e45531">
+
 
 Full report in PDF available here,
 
