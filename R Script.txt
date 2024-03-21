@@ -1,0 +1,234 @@
+#Get working directory
+getwd()
+
+#Set working directory
+setwd("C:\\Users\\Afif Rifa'ie\\Desktop\\A.P.U Master\\R Programming")
+
+#install package
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("tidyverse")
+install.packages("plotly")
+
+#upload package
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(plotly)
+
+#Data import and set the data into a variable
+weather_data = read.csv("C:\\Users\\Afif Rifa'ie\\Desktop\\weather.csv",header=TRUE)
+weather_data
+
+#Data exploration
+#structure
+str(weather_data)
+
+#Number of Row and Columns
+dim(weather_data)
+
+#column name
+colnames(weather_data)
+
+#to get all the header
+names(weather_data)
+
+#summary of data
+summary(weather_data)
+
+#to view data in table format
+View(weather_data)
+
+#Data cleaning
+#rename all the header 
+colnames(weather_data)<-c("Min_Temp", "Max_Temp", "Rain_Fall", "Evaporation", "Sunshine", "Wind_Gust_Dir",
+                          "Wind_Gust_Speed", "Wind_Dir_9am", "Wind_Dir_3pm", "Wind_Speed_9am",
+                          "Wind_Speed_3pm", "Humidity_9am", "Humidity_3pm", "Pressure_9am",
+                          "Pressure_3pm", "Cloud_9am", "Cloud_3pm", "Temp_9am", "Temp_3pm",
+                          "Rain_Today", "Risk_MM", "Rain_Tomorrow")
+
+#add Days column
+Days = c(1:366)
+weather_data = cbind(weather_data, Days)
+
+
+#Analysis 1.1
+#Raining and non-raining days 
+weather_data %>%
+  ggplot(aes(Rain_Today))+
+  geom_bar(fill = "#47B23F")+
+  theme_bw()+
+  labs(x = "Rain",
+       y = "Occurance (Days)",
+       title = "Number of raining and not raining day in a year")
+  
+
+#Analysis 1.2
+#Raining and non-raining days for tomorrow 
+weather_data %>%
+  ggplot(aes(Rain_Tomorrow))+
+  geom_bar(fill = "#447ED2")+
+  theme_bw()+
+  labs(x = "Rain Tomorrow",
+       y = "Occurance (Days)",
+       title = "Number of raining and not raining the next day in a year")
+  
+
+#Analysis 1.3
+#Total rainfall on raining days
+weather_data %>%
+  ggplot(aes(Days, Rain_Fall, colour = Rain_Today))+
+  geom_point()+
+  geom_line()+
+  geom_smooth(method = lm)+
+  theme_bw()+
+  labs(x = "Days",
+       y = "Rainfall",
+       title = "Rainfall amount during rain")
+
+
+#Analysis 1.4
+#Relation between cloud at 3pm and Rain Today
+weather_data %>%
+  ggplot(aes(Cloud_3pm,Rain_Today))+
+  geom_boxplot(fill = "#D997E2")+
+  theme_bw()+
+  labs(x = "Cloud level",
+       y = "Rain today",
+       title = "Relation between cloud at 3pm and Rain Today")
+
+
+#Analysis 2.1 
+#Average Temperature at 3pm
+weather_data %>%
+  ggplot(aes(Rain_Today,Temp_3pm))+
+  geom_boxplot(fill = "#D55F84")+
+  coord_flip()+
+  theme_bw()+
+  labs(x = "Rain",
+       y = "Temperature",
+       title = "Average temperature at 3pm when raining and not raining days")
+
+
+#Analysis 2.2 
+#Compare temperature and sunshine
+weather_data %>%
+  ggplot(aes(Sunshine,Temp_3pm))+
+  geom_point()+
+  geom_smooth(method=lm)+
+  theme_bw()+
+  labs(x = "Sunshine",
+       y = "Temperature",
+       title = "Relation between Sunshine and Temperature at 3pm")
+
+
+#Analysis 2.3
+#Compare temperature and humidity
+weather_data %>%
+  ggplot(aes(Humidity_9am,Temp_9am))+
+  geom_point()+
+  geom_smooth()+
+  theme_bw()+
+  labs(x = "Humidity",
+       y = "Temperature",
+       title = "Relation between Humidity and Temperature at 9am")
+
+
+#Analysis 2.4
+#Compare temperature and evaporation
+weather_data %>%
+  ggplot(aes(Temp_9am,Evaporation))+
+  geom_point(colour = "#EDAEAE")+
+  geom_smooth(method = lm)+
+  theme_bw()+
+  labs(x = "Temperature",
+       y = " Evaporation",
+       title = "Relation between temperature and evaporation")
+
+
+#Analysis 3.1
+#Average Wind Gust Speed 
+weather_data %>%
+  ggplot(aes(Days, Wind_Gust_Speed))+
+  geom_point(color = "#049599")+
+  geom_smooth(method = lm)+
+  theme_minimal()+
+  labs(x = "Days",
+       y = "Wind Gust Speed",
+       title = "Wind Gust Speed throughout a year")
+
+
+#Analysis 3.2
+#Major Wind Gust Speed occurrence 
+weather_data %>%
+  drop_na(Wind_Gust_Dir) %>%
+  ggplot(aes(fct_infreq(Wind_Gust_Dir)))+
+  geom_bar(fill = "#097679")+
+  coord_flip()+
+  theme_bw()+
+  labs(x = "Wind Gust Direction",
+       y = "Occurance",
+       title = "Number of Wind Gust Direction Occurance")
+
+
+#Analysis 3.3
+#Highest wind gust speed for each wind gust direction 
+weather_data %>%
+  drop_na(Wind_Gust_Speed, Wind_Gust_Dir) %>%
+  ggplot(aes(Wind_Gust_Speed,Wind_Gust_Dir))+
+  geom_point(colour = "#D9CE2A")+
+  geom_line(size = 0.8)+
+  theme_minimal()+
+  labs(x = "Wind Gust Speed",
+       y = "Wind Gust Direction",
+       title = "Number of Wind Gust Speed for each Wind Gust Direction")
+
+
+#Analysis 3.4
+#Average wind speed at 3pm when raining
+weather_data %>%
+  ggplot(aes(Rain_Today, Wind_Speed_3pm))+
+  geom_boxplot(fill = "#42D2E3")+
+  coord_flip()+
+  theme_bw()+
+  labs(x = "Rain Today",
+       y = "Wind Speed",
+       title = "Average wind speed at 3pm when raining")
+
+
+#Analysis 3.5
+#Wind gust direction when wind gust speed is over 50km/h while raining and identify the rain volume
+weather_data %>%
+  filter(Wind_Gust_Speed > 50,
+         Rain_Today != "No") %>%
+  drop_na(Wind_Gust_Dir) %>%
+  ggplot(aes(Wind_Gust_Dir, Wind_Gust_Speed))+
+  geom_point(aes(color = Rain_Today,
+                 size = Rain_Fall))+
+  theme_bw()+
+  coord_flip()+
+  labs(x = "Wind Gust Direction",
+       y = "Wind Gust Speed",
+       title = "Wind Gust Direction when wind speed is above 50km/h")
+
+
+#Analysis 4.1
+#Relationship between sunshine and evaporation
+weather_data %>%
+  ggplot(aes(Sunshine,Evaporation))+
+  geom_point(color = "#18AEDA")+
+  geom_smooth()+
+  theme_bw()+
+  labs(title="Relation between Sunshine and Evaporation")
+
+
+#Analysis 4.2
+#Relationship between sunshine and humidity  
+weather_data %>%
+  ggplot(aes(Sunshine,Humidity_9am))+
+  geom_point()+
+  geom_smooth()+
+  theme_bw()+
+  labs(title = "Relation between Sunshine and Humidity")
+
+
