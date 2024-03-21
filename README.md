@@ -1,6 +1,6 @@
 # Meteorological Data Analysis using R
 
-It can also be termed as weather analysis. The dataset used in this analysis contains historical weather data of the U.S.
+It can also be termed as weather analysis.
 
 ![rain4-1-620x370](https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/55b6f861-3101-4bb6-bd94-c2d4847f38bf)
 
