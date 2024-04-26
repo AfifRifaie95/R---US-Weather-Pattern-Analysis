@@ -1,4 +1,4 @@
-# Meteorological Data Analysis using R
+# Meteorological Data Analysis in R
 
 It can also be termed as weather analysis.
 
@@ -13,6 +13,8 @@ The purpose of this report is to investigate and analyse weather data from the U
 
 
 ### Data Source
+
+The dataset is obained from Kaggle [Available Here](https://www.kaggle.com/datasets/zaraavagyan/weathercsv)
 
 ### Software
 
