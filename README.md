@@ -79,6 +79,60 @@ After cleaning the data set, the next step is to do the data pre-processing. Fro
 
 <img width="427" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/c86ff047-3c49-4aee-8c89-952802355f65">
 
+### Question 1 The United States Rain Analysis
+
+#### Analysis 1.1: Days with and without rain over the course of a year
+
+<img width="433" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/4c1104ca-2bd6-47f3-8772-e31434ba1593">
+
+
+In this assignment, pipe function %>% is used to start the code as it takes output of one function, and passes it into the another function as an argument. The stored data variable is weather_data. geom_bar() function under ggplot() package is used to build a bar chart graph. The x-axis shows days it rained or didn't rain, and the y-axis shows how many days it happened. The bar’s colour is set by the fill function in geom_bar(). The theme_bw function is to set theme as grey theme with grey lines on white background. While labs() function is used to change the names of the x axis, y axis and to give title of the graph.
+
+
+<img width="434" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/5ef83098-daec-47e4-bf8d-27c6f11bfc5d">
+
+
+The figure above shows that the number of days when it does not rain is more than the number of days when it does rain. Meaning that it does not rain very often in the U.S.
+
+#### Analysis 1.2 Number of rainy and not rainy days for tomorrow
+
+<img width="429" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/529ed185-7414-4b61-b4f3-a099eaeb2341">
+
+The code is used to make a bar chart graph, where x representing will it rain tomorrow and y axis representing how often it will rain. The bar's colour is set by the fill function in geom_bar().
+
+
+<img width="431" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/2facf118-2040-49ae-ab1d-84984a748437">
+
+Similar to rain today bar chart, rain tomorrow has similar amount of rainy and not rainy days where no rain takes the majority of the days in the United States throughout a year.
+
+#### Analysis 1.3 Total rainfall for raining days
+
+<img width="436" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/3082faac-2a22-4e48-8def-3806be293e23">
+
+This code is used to build a scatter plot with a tabulation line that shows how much rain falls throughout a year, with X axis representing the number of days and Y axis representing the amount of rain. In addition to that, colour = Rain_Today in ggplot() function to differentiate categorical variable for Rain_Today in the plot. Green represent yes for raining days while orange represent not raining days. geom_smooth(method = lm) function to add a straight regression line into the scatter plot.
+
+<img width="431" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/a07dc0e5-1dc1-4dd1-8b45-b8f46365ce0c">
+
+The figure above shows that most of the rain falls between 0 and 20 throughout the year, and only one day has high amount of rain fall.
+
+
+#### Analysis 1.4 Relation between cloud at 3pm and rain today
+
+<img width="435" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/a88af14d-abfb-4bd0-956a-49142ba69cf6">
+
+The code is used to build a boxplot graph. The x axis representing cloud level, the y axis representing rain today. The colour of the boxplot is set by the fill function in geom_boxplot.
+
+
+<img width="440" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/9ae88715-d72d-46a6-a1c6-515c7d1cca90">
+
+
+The line in the middle of the box shows the average value, while the left and right walls show the lowest and highest values. The boxplot above shows that on days when it rains, the clouds are more likely to be in the 2–7 cloud level range than on days when it doesn't rain, when the cloud level can go as low as 1.
+
+
+
+
+
+
 
 
 
