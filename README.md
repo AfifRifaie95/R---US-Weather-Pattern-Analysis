@@ -4,6 +4,20 @@ It can also be termed as weather analysis.
 
 ![rain4-1-620x370](https://github.com/AfifRifaie95/R---US-Weather-Pattern-Analysis/assets/159521904/55b6f861-3101-4bb6-bd94-c2d4847f38bf)
 
+### Table of Content
+
+[Project Overview](#Project_Overview)
+[Data Import](#Data_Import)
+[Data Exploration](#Data_Exploration)
+[Data Cleaning](#Data_Cleaning)
+[Data Pre-processing](#Data_Pre-processing)
+[Question 1 The United States Rain Analysi](#Question_1_The_United_States_Rain_Analysi)
+[Question 2 Level of dryness in the United States](#Question_2_Level_of_dryness_in_the_United_States)
+[Question 3 Common Breeze in the United States](#Question_3_Common_Breeze_in_the_United_States)
+[Question 4 Why no rain take majority in the United States?](#Question_4_Why_no_rain_take_majority_in_the_United_States?)
+[Conclusion](#Conclusion)
+[References](#References)
+
 ### Project Overview
 
 The purpose of this report is to investigate and analyse weather data from the United States. It begins with performing data importing, data exploration, data cleaning and data pre-processing, followed by investigation and visualisation into a visual graph using R Studio.
@@ -15,6 +29,7 @@ The dataset is obained from Kaggle [Available Here](https://www.kaggle.com/datas
 
 ### Software
 
+R [Available Here](https://cran.r-project.org/bin/windows/base/)
 R Studio [Available Here](https://www.r-project.org/)
 
 ### Data Import
@@ -255,5 +270,7 @@ In conclusion, I have investigated and analysed the data on the weather in the U
 ### References
 
 Wickham, H., Chang, W., & Wickham, M. H. (2016). Package ‘ggplot2’. Create elegant data visualisations using the grammar of graphics. Version, 2(1), 1-189.
+
 Dinea, E. (2021, November 24). PREDICTION OF RAIN TOMORROW IN AUSTRALIA. Jovian. Retrieved December 17, 2022, from https://jovian.ai/edaaydinea/prediction-of-raintomorrow
+
 R Programming 101. (2021, February 2). Ggplot for plots and graphs. An introduction to data visualization using R programming [Video]. YouTube. https://www.youtube.com/watch?v=HPJn1CMvtmI&list=LL&index=6
