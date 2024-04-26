@@ -8,25 +8,25 @@ It can also be termed as weather analysis.
 
 - [Project Overview](#project-overview)
 
-- [Data Import](#Data_Import)
+- [Data Import](#data-import)
 
-- [Data Exploration](#Data_Exploration)
+- [Data Exploration](#data-exploration)
 
-- [Data Cleaning](#Data_Cleaning)
+- [Data Cleaning](#data-cleaning)
 
-- [Data Pre-processing](#Data_Pre-processing)
+- [Data Pre-processing](#data-pre-processing)
 
-- [Question 1 The United States Rain Analysi](#Question_1_The_United_States_Rain_Analysi)
+- [Question 1 The United States Rain Analysi](#question-1-the-united-states-rain-analysis)
 
-- [Question 2 Level of dryness in the United States](#Question_2_Level_of_dryness_in_the_United_States)
+- [Question 2 Level of dryness in the United States](#question-2-level-of-dryness-in-the-united-states)
 
-- [Question 3 Common Breeze in the United States](#Question_3_Common_Breeze_in_the_United_States)
+- [Question 3 Common Breeze in the United States](#question-3-common-breeze-in-the-united-states)
 
-- [Question 4 Why no rain take majority in the United States?](#Question_4_Why_no_rain_take_majority_in_the_United_States?)
+- [Question 4 Why no rain take majority in the United States?](#question-4-Why-no-rain-take-majority-in-the-united-states?)
 
-- [Conclusion](#Conclusion)
+- [Conclusion](#conclusion)
 
-- [References](#References)
+- [References](#references)
 
 ### Project Overview
 
