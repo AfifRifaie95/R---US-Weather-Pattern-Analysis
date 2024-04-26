@@ -58,7 +58,26 @@ Similarly, names() function gives the name of the object's header in a data fram
 <img width="444" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/aa6e488e-e1c1-47cb-82e8-b93fae17f1f9">
 
 
+summary() function provides an overview of the variables, including their minimum, first quartile, median, mean, third quantile, and maximum values.
 
+<img width="428" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/ecb77611-7476-4770-b7f6-e537412bd28f">
+
+View() function is used to produce table style data viewer.
+
+
+### Data Cleaning
+
+Once I explored the data, I proceed with data cleaning. Basically means to make sure that all the columns are set up in a way that is easy for the user to understand and to make sure the columns are set without spacing and inconsistent use of capital and small letter. As the snipped below, I reset the column names with proper spacing using underscore and start the name with capital letter. I state the new columns name into the vector c(“ ”) and set it back to the weather_data.
+
+
+<img width="428" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/5385b8df-48fc-427d-a4c7-64b3b14572fa">
+
+### Data Pre-processing
+
+After cleaning the data set, the next step is to do the data pre-processing. From the data set, there are no dates given for when each of data attributes happened. As below snipped, I add new Days columns to the data set. With Days column, it would be useful to measure when each of the attribute happened. First, I set new vector of 1:366 because there are 366 rows of data. The assumption I make is each of the row represent a day. Then I used cbind() function to add new Days column in the data set.
+
+
+<img width="427" alt="image" src="https://github.com/AfifRifaie95/US-Weather-Pattern-Analysis-in-R/assets/159521904/c86ff047-3c49-4aee-8c89-952802355f65">
 
 
 
